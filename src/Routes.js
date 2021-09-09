@@ -5,12 +5,13 @@ import Home from './components/Home'
 import Shop from './components/Shop'
 import Contact from './components/Contact'
 import Cart from './components/Cart'
+import styles from './App.css'
 
 const Routes = () => {
 
   return (
     <BrowserRouter>
-    <div className="App">
+    <div className={styles.main}>
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home}/>
