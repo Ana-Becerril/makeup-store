@@ -11,3 +11,20 @@
   font-weight: 300;
   font-style: normal;
 }
+
+
+@font-face {
+  font-family: 'Monoton';
+  src: url('./fonts/Monoton-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('./fonts/NotoSans-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
