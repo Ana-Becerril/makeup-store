@@ -1,16 +1,16 @@
-body, html{
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0; 
-    background-color: transparent;
-
-}
 
 .navContainer{
-    height: 100%;
-    width: 100%;
-    background-color: transparent;
+  width: 100%;
+  height: 60px;
+  padding:20px 0 0 0;
+  margin: 0;
+  list-style: none;
+  display: inline-flex;
+  justify-content: flex-end;
+  position:absolute;
+  background-color: transparent;
+  z-index: 2;
+
 }
 
 .bar{
@@ -26,16 +26,16 @@ body, html{
 }
 
 .home, .shop, .contact, .cart{
-    padding: 3px 0;
+    padding: 5px 0;
     height: 100%;
     cursor: pointer;
 }
 
 a{
-  color:#6184C6;
+  color:#FCD752;
   text-decoration: none;
-  letter-spacing: 4px;
-  font-size: 25px;
+  letter-spacing: 6px;
+  font-size: 22px;
   font-family: 'Poppins-Ligth';
 
 }
