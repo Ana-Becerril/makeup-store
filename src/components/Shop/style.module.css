@@ -23,15 +23,28 @@ body, html{
     text-align: center;
 }
 
+h2{
+    color:#FCD752;
+    font-family: 'Monoton';
+    font-size: 40px;
+}
+
 ul{
     list-style: none;
 }
 
 li{
     font-family: 'Poppins-Ligth';
-    font-size: 30px;
+    font-size: 25px;
     color: #6184C6;
+    cursor: pointer;
 
+
+}
+
+li:hover{
+    background-color: #FCD752;
+    color:#FCA3B9;
 }
 
 .rightContainer{
