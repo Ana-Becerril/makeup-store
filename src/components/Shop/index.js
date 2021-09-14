@@ -1,7 +1,15 @@
+import React from 'react';
+import styles from './style.module.css';
+
+
+
 const Shop = () => {
     return (
-      <div>
-        <h1>Hello from Shop</h1>
+      <div className={styles.mainContainer}>
+        <div className={styles.leftContainer}>
+          <h1>CATEGORIES</h1>
+        </div>
+        <div className={styles.rightContainer}></div>
       </div>
     );
   };
