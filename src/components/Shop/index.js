@@ -8,6 +8,11 @@ const Shop = () => {
       <div className={styles.mainContainer}>
         <div className={styles.leftContainer}>
           <h1>CATEGORIES</h1>
+          <ul>
+            <li>Lashes</li>
+            <li>Eyes</li>
+            <li>Lips</li>
+          </ul>
         </div>
         <div className={styles.rightContainer}></div>
       </div>
