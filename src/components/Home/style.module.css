@@ -51,7 +51,7 @@ span{
     color:#F6F4F9
 }
 
-button{
+.button, button{
     font-family: 'Quicksand-Light';
     background-color: #6184C6;
     width: 200px;

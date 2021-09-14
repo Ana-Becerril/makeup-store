@@ -14,7 +14,7 @@ body, html{
 }
 
 .leftContainer{
-    width: 40%;
+    width: 33%;
     background-color: #FCA3B9;
     display: flex;
     justify-content: center;
@@ -23,10 +23,19 @@ body, html{
     text-align: center;
 }
 
+.rightContainer{
+    width: 75%;
+    background-color: #F6F4F9;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
 h2{
     color:#FCD752;
     font-family: 'Monoton';
-    font-size: 40px;
+    font-size: 42px;
 }
 
 ul{
@@ -38,16 +47,9 @@ li{
     font-size: 25px;
     color: #6184C6;
     cursor: pointer;
-
-
 }
 
 li:hover{
     background-color: #FCD752;
     color:#FCA3B9;
-}
-
-.rightContainer{
-    width: 75%;
-    background-color: #F6F4F9;
 }
