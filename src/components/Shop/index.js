@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styles from './style.module.css';
 import axios from "axios";
 import Category from '../Category';
+import ProductCard from '../ProductCard'
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -27,8 +28,10 @@ const Shop = () => {
     })  
     .catch(error =>{
       console.log(error)
-    })
-  }, [setEndPoint(endPoint)])
+    }) 
+  }, [endPoint])
+
+  
 
   return (
     <>
@@ -39,7 +42,10 @@ const Shop = () => {
             <ul>
               {category.map(el => (
                 <Category
-                  onClick={() => setTitle(el.category), setEndPoint(el.name)}
+                  onClick={() => { 
+                    setTitle(el.category);
+                    setEndPoint(el.name);   
+                  }}
                   category={el.category} />))}
             </ul>
           </div>
