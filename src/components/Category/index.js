@@ -1,9 +1,9 @@
 
-const Category = ({onClick, name}) => {
+const Category = ({onClick, category}) => {
     return (
       <div>
         <li onClick={onClick} className="category">
-            {name}
+            {category}
         </li>
        </div>
     );
