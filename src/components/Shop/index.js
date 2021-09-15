@@ -31,7 +31,6 @@ const Shop = () => {
     }) 
   }, [endPoint])
 
-  
 
   return (
     <>
