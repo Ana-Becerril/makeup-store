@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 import styles from './style.module.css';
 import axios from "axios";
 import Category from '../Category';
-import ProductCard from '../ProductCard'
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
+  const [cardProduct, setCardProduct] = useState(null)
   const [title, setTitle] = useState("")
   const [endPoint, setEndPoint] = useState("blush")
   const category =
@@ -31,6 +31,8 @@ const Shop = () => {
     }) 
   }, [endPoint])
 
+  
+
 
   return (
     <>
@@ -41,6 +43,7 @@ const Shop = () => {
             <ul>
               {category.map(el => (
                 <Category
+                  key={el.name}
                   onClick={() => { 
                     setTitle(el.category);
                     setEndPoint(el.name);   
@@ -53,8 +56,9 @@ const Shop = () => {
         <div className={styles.cardsContainer}>
           <h2>{title}</h2>
           <ul>
-            {products && products.lenght > 0 ? products.map(product =><li 
-            key={product.id}>{product.name}</li>) : null}
+             {products && products.lenght > 0 ? products.map(product =>
+            <li key={product.id}>
+            {product.name}</li>) : null} 
           </ul>
           </div>
         </div>
