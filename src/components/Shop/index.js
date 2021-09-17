@@ -58,6 +58,7 @@ const Shop = () => {
             key={product.id}
             name={product.name}
             image={product.image_link}
+            price={product.price}
             />
             ))}
           </div>

@@ -1,22 +1,56 @@
 
 
 .productCardContainer{
-    width: 300px;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: 315px;
     margin:2px;
+    border:2px #FCA3B9 dotted;
+    border-radius: 25px;
+    text-align: center;
 }
 
-li{
-    list-style: none;
+.name, .price{
+    width: 90%;
+    font-size: 14px;
+    font-family: 'Quicksand-Light';
+    color: #6184C6;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: center;
 }
 
-.name{
-    font-size: 17px;
+.price{
+    width: 10%;
+    align-self:center;
 }
 
 img{
     float: left;
-    width: 280px;
-    height: 250px;
+    width: 260px;
+    height: 230px;
     object-fit: contain;
 }
+
+
+
+.coolLink {
+    text-decoration: none;
+    color: #6184C6;
+
+  }
+  
+  .coolLink::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background:#FCA3B9;
+    transition: width 0.1s;
+  }
+  
+  .coolLink:hover::after {
+    width: 95%;
+    transition: width 0.5s;
+  }

@@ -1,10 +1,12 @@
 import styles from './style.module.css' 
 
-const ProductCard = ({name, image}) => {
+const ProductCard = ({name, image, price}) => {
     return (
       <div className={styles.productCardContainer}>
-        <li className={styles.name}> {name} </li>
-        <img src={image}/>
+        <img src={image} alt="Make up cosmetic"/>
+        <div className={`${styles.name} ${styles.coolLink}`}> {name} </div>
+        <div className={`${styles.price} ${styles.coolLink}`}> {price} </div>
+
       </div>
     );
   };
