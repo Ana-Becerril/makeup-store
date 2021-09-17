@@ -17,9 +17,7 @@ const Shop = () => {
     { name: "foundation", category: "Foundation" },
     { name: "lipLiner", category: "Lip liner" },
     { name: "lipstick", category: "Lipstick" },
-    { name: "mascara", category: "Mascara" },
-    { name: "nailPolish", category: "Nail polish" }]
-
+    { name: "mascara", category: "Mascara" }]
   useEffect(() => {
     axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
     .then(response =>{
@@ -51,7 +49,7 @@ const Shop = () => {
         </div>
         <div className={styles.rightContainer}>
         <div className={styles.cardsContainer}>
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <div className={styles.productsCard}>
              {products.map(product =>(
             <ProductCard 

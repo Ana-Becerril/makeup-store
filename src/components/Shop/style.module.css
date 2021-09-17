@@ -17,7 +17,7 @@ body, html{
 }
 
 .leftContainer{
-    width: 33%;
+    width: 27%;
     height: 100%;
     background-color: #FCA3B9;
     display: flex;
@@ -30,7 +30,7 @@ body, html{
 }
 
 .rightContainer{
-    width: 75%;
+    width: 80%;
     background-color: #F6F4F9;
     display: flex;
     justify-content: center;
@@ -45,13 +45,23 @@ h2{
     padding-top: 35px;
 }
 
+h3{
+    color:#FCD752;
+    font-family: 'Monoton';
+    font-size: 42px;
+    padding-top: 50px;
+    padding-left: 220px;
+    width: 100%;
+
+}
+
 .productsCard{
-    width:70%;
+    width:80%;
     height:100%;
     display:flex;
     flex-wrap: wrap;
     position: absolute;
-    left: 430px;
+    left: 320px;
     align-items: center;
     justify-content: center;
 }
