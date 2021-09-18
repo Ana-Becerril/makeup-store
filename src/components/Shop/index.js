@@ -3,13 +3,11 @@ import styles from './style.module.css';
 import axios from "axios";
 import Category from '../Category';
 import ProductCard from '../ProductCard';
-import Cart from '../Cart';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [title, setTitle] = useState("");
   const [endPoint, setEndPoint] = useState("blush");
-  const [productInCart, setProductInCart] = useState ([]);
 
   const category =
     [{ name:"blush", category: "Blush" },
@@ -31,9 +29,6 @@ const Shop = () => {
       console.log(error)
     }) 
   }, [endPoint])
-
-
-  
 
   return (
     <>

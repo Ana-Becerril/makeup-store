@@ -6,8 +6,8 @@
     width: 300px;
     height: 310px;
     margin:2px;
-    border:2px #FCA3B9 dotted;
-    border-radius: 25px;
+    border:1px #FCA3B9 solid;
+    border-radius: 12px;
     text-align: center;
 }
 
