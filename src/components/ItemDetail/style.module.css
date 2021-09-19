@@ -1,0 +1,21 @@
+
+.productCardContainer{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 310px;
+    margin:2px;
+    border:1px #FCA3B9 solid;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.name, .price{
+    width: 90%;
+    font-size: 14px;
+    font-family: 'Quicksand-Light';
+    color: #6184C6;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: center;
+}
