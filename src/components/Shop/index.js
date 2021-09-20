@@ -3,13 +3,13 @@ import styles from './style.module.css';
 import axios from "axios";
 import Category from '../Category';
 import ProductCard from '../ProductCard';
-import { Link } from "react-router-dom";
-import ItemDetail from '../ItemDetail';
+import ItemDetailModal from '../ItemDetailModal';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [title, setTitle] = useState("");
   const [endPoint, setEndPoint] = useState("blush");
+  const [itemDetail, setItemDetail] = useState(false)
 
   const category =
     [{ name:"blush", category: "Blush" },
@@ -34,16 +34,15 @@ const Shop = () => {
     }) 
   }, [endPoint])
 
-  function detailHandler (product) {
-    return ( <>
-    <ItemDetail
-     id={product.id}
-     name={product.name}
-     image={product.image_link}
-     price={product.price}
-    />
-    </>)
-  }
+  function removeItemDetail () {
+   setItemDetail(false)
+ }
+
+
+   function showDetail () {
+   setItemDetail(true)
+   }
+    
 
   return (
     <>
@@ -68,18 +67,22 @@ const Shop = () => {
           <h3>{title}</h3>
           <div className={styles.productsCard}>
              {products.map(product =>(
-            <Link  to={`/item/${product.id}`}>
             <ProductCard 
             id={product.id}
             name={product.name}
             image={product.image_link}
             price={product.price}
-            detailHandler={()=>{detailHandler(product)}}
+            showDetail={showDetail}
             />
-            </Link>
             ))}
           </div>
           </div>
+          {itemDetail ? <ItemDetailModal
+           id={products.id}
+           name={products.name}
+           image={products.image_link}
+           price={products.price}
+          removeItemDetail={removeItemDetail}/> : null}
         </div>
       </div>
     </>
