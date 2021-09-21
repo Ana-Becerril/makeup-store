@@ -11,14 +11,14 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) 
     <>
       <div className={styles.modal}>
         <div className={styles.modalContent}>
-          <div onClick={removeItemDetail}>
+          <div className={styles.removeItemDetail}onClick={removeItemDetail}>
             <FontAwesomeIcon icon={faTimesCircle} className={styles.closeIcon} />
           </div>
           <div className={styles.productCardContainer}>
             <img src={image} alt="Make up cosmetic" />
-            <div> {name} </div>
-            <div> ${price} </div>
-            <div> {description} </div>
+            <div className={styles.name}> {name} </div>
+            <div className={styles.price}> ${price} </div>
+            <div className={styles.description}> {description} </div>
           </div>
           <div className={styles.btnContainer}>
           <NavLink className={styles.btnModal} to="/cart"> ADD TO CART </NavLink>

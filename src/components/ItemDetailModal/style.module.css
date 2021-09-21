@@ -21,23 +21,27 @@
 .modalContent {
     display: flex;
     flex-direction: column;
-    width: 630px;
-    height: 520px;
+    width: 800px;
+    height: 560px;
     z-index: 1;
-    text-align: end;
     color: #FCD752;
     font-size: 20px;
     background-color:#FFFF;
     border-radius: 40px;
+    font-size: 15px;
     
 }
 
+.removeItemDetail{
+    display: flex;
+    justify-content: end;
+}
 
 .closeIcon{
     color: #FCD752;
     font-size: 45px;
     cursor: pointer;
-    margin: 20px;
+    margin: 18px;
 }
 
 .closeIcon :hover {
@@ -47,22 +51,31 @@
 .productCardContainer{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%x;
     margin:2px;
-    border:1px #FCA3B9 solid;
     border-radius: 12px;
     text-align: center;
+    color: #6184C6;
+    font-family: 'Quicksand-Light';
+
+
 }
 
 .name, .price{
     width: 90%;
-    font-size: 14px;
+    font-size: 20px;
     font-family: 'Quicksand-Light';
     color: #6184C6;
     cursor: pointer;
     text-transform: uppercase;
     align-self: center;
+}
+
+.description{
+    padding: 30px;
 }
 
 .btnContainer{
