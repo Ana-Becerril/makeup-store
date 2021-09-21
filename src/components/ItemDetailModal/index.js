@@ -18,8 +18,8 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) 
             <img src={image} alt="Make up cosmetic" />
             <div className={styles.name}> {name} </div>
             <div className={styles.price}> ${price} </div>
-            <div className={styles.description}> {description} </div>
           </div>
+          <div className={styles.description}> {description} </div>
           <div className={styles.btnContainer}>
           <NavLink className={styles.btnModal} to="/cart"> ADD TO CART </NavLink>
           </div>

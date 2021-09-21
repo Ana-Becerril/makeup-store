@@ -4,6 +4,7 @@ import axios from "axios";
 import Category from '../Category';
 import ProductCard from '../ProductCard';
 import ItemDetailModal from '../ItemDetailModal';
+import Cart from '../Cart';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -30,6 +31,12 @@ const Shop = () => {
       setProductObject(itemId[0])
       console.log(itemId)
     }
+
+    // function addItemToCart (id) {
+    //   if () {
+        
+    //   }
+    // }
 
   useEffect(() => {
     function fetchData (){axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
