@@ -9,7 +9,10 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
   const [title, setTitle] = useState("");
   const [endPoint, setEndPoint] = useState("blush");
-  const [itemDetail, setItemDetail] = useState(false)
+  const [itemDetail, setItemDetail] = useState(false);
+  const [productObject, setProductObject] = useState({});
+  const removeItemDetail = () => setItemDetail(false);
+  const showDetail = () => setItemDetail(true);
 
   const category =
     [{ name:"blush", category: "Blush" },
@@ -22,28 +25,23 @@ const Shop = () => {
     { name: "lipstick", category: "Lipstick" },
     { name: "mascara", category: "Mascara" }]
 
+    function itemFilter (id) {
+      const itemId = products.filter(product => product.id === id);
+      setProductObject(itemId[0])
+      console.log(itemId)
+    }
 
   useEffect(() => {
-    axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
+    function fetchData (){axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
     .then(response =>{
-      console.log(response.data)
       setProducts(response.data)
     })  
     .catch(error =>{
       console.log(error)
-    }) 
-  }, [endPoint])
-
-  function removeItemDetail () {
-   setItemDetail(false)
- }
-
-
-   function showDetail () {
-   setItemDetail(true)
-   }
+    })}
+    fetchData();
+  }, [endPoint, itemDetail])
     
-
   return (
     <>
       <div className={styles.mainContainer}>
@@ -73,15 +71,17 @@ const Shop = () => {
             image={product.image_link}
             price={product.price}
             showDetail={showDetail}
+            itemFilter={()=>itemFilter(product.id)}
             />
             ))}
           </div>
           </div>
           {itemDetail ? <ItemDetailModal
-           id={products.id}
-           name={products.name}
-           image={products.image_link}
-           price={products.price}
+           id={productObject.id}
+           name={productObject.name}
+           image={productObject.image_link}
+           price={productObject.price}
+           description={productObject.description}
           removeItemDetail={removeItemDetail}/> : null}
         </div>
       </div>

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const ItemDetailModal = ({ name, image, price, removeItemDetail }) => {
+const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) => {
 
   return (
     <>
@@ -18,9 +18,9 @@ const ItemDetailModal = ({ name, image, price, removeItemDetail }) => {
             <img src={image} alt="Make up cosmetic" />
             <div> {name} </div>
             <div> ${price} </div>
+            <div> {description} </div>
           </div>
           <div className={styles.btnContainer}>
-          <NavLink className={styles.btnModal} to="/cart"> SHOP </NavLink>
           <NavLink className={styles.btnModal} to="/cart"> ADD TO CART </NavLink>
           </div>
         </div>
