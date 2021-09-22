@@ -1,9 +1,17 @@
-const Cart = () => {
-    return (
-      <div>
-        <h1>Hello from Cart</h1>
+import styles from './style.module.css';
+
+const Cart = ({ onAdd, onRemove, name, price }) => {
+  return (
+    <div className={styles.mainContainer}>
+     
+      <div className={styles.name}> {name} </div>
+      <div className={styles.price}> ${price} </div>
+      <div className={styles.btnContainer}>
+      <button onClick={onAdd}> + </button>
+      <button onClick={onRemove}> - </button>
       </div>
-    );
-  };
-  
-  export default Cart;
+    </div>
+  );
+};
+
+export default Cart;

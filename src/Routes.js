@@ -6,10 +6,9 @@ import Shop from './components/Shop'
 import Contact from './components/Contact'
 import Cart from './components/Cart'
 import styles from './App.css'
-// import ItemDetailModal from './components/ItemDetailModal'
 
 const Routes = () => {
-
+  
   return (
     <BrowserRouter>
     <div className={styles.main}>
@@ -17,7 +16,6 @@ const Routes = () => {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/shop" component={Shop}/>
-        {/* <Route path= "/item/:id" component={ItemDetailModal}/> */}
         <Route path="/contact" component={Contact}/>
         <Route exact path="/cart" component={Cart} />
       </Switch>
