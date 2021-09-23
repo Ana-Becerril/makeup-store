@@ -1,16 +1,19 @@
 import styles from './style.module.css';
+import { NavLink } from 'react-router-dom';
 
-const Cart = ({ onAdd, onRemove, name, price }) => {
+
+const Cart = () => {
   return (
+    <>
     <div className={styles.mainContainer}>
-
-      <div className={styles.name}> {name} </div>
-      <div className={styles.price}> ${price} </div>
-      <div className={styles.btnContainer}>
-        <button onClick={onAdd}> + </button>
-        <button onClick={onRemove}> - </button>
+      <div className={styles.emptyContainer}>
+      <h4>Your cart is <span>empty :(</span> </h4>
+        <button>
+            <NavLink className={styles.button} to="/shop">SHOP</NavLink>
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

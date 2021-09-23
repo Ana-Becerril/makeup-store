@@ -41,4 +41,27 @@ p{
     color: white;
 }
 
+.iconsBarContact{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 100px;
+}
+
+.githubIcon, .linkedinIcon, .twitterIcon, .whatsappIcon{
+    color:#FCA3B9;
+    font-size: 60px;
+    height: 100%;
+    width: 20%;
+    padding:0 20px;
+    padding-bottom: 8px;
+}
+
+.githubIcon:hover, .linkedinIcon:hover, .twitterIcon:hover, .whatsappIcon:hover {
+    color: white;
+  }
+
 
