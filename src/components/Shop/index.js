@@ -12,8 +12,7 @@ const Shop = () => {
   const [endPoint, setEndPoint] = useState("blush");
   const [itemDetail, setItemDetail] = useState(false);
   const [productObject, setProductObject] = useState({});
-  const [count, setCount] = useState(0);
-  const [cartItems, setCartItems] = useState([]);
+  const [count, setCount] = useState([]);
 
   const removeItemDetail = () => setItemDetail(false);
   const showDetail = () => setItemDetail(true);
@@ -35,43 +34,13 @@ const Shop = () => {
     console.log(itemId)
   }
 
-  //  const incrementCount = () => {
-  //  const countCopy = [...count]
-    //  setCount(count + 1)
-    //  if (count > 1) {
-      // const json = JSON.stringify(count)
-      // localStorage.setItem('itemsincart', json)
-      // setCount(countCopy)
-    //  }
-    //  console.log(count)
-  //  }
-
-   const onAdd = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist) {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...product, qty: 1 }]);
-    }
-  };
-
-  const onRemove = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== product.id));
-    } else {
-      setCartItems(
-        cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-        )
-      );
-    }
-  };
-
+   const incrementCount = (products) => {
+     setCount([...count, products] );
+       const json = JSON.stringify(count)
+       localStorage.setItem('itemsincart', json)
+      console.log(count.length)
+      console.log(setCount)
+  }
 
   useEffect(() => {
     function fetchData() {
@@ -128,19 +97,11 @@ const Shop = () => {
             image={productObject.image_link}
             price={productObject.price}
             description={productObject.description}
+            incrementCount={()=>incrementCount(products)}
             removeItemDetail={removeItemDetail}
-            onAdd={onAdd}
              /> : null}
         </div>
       </div>
-      <Cart
-      id={productObject.id} 
-      onAdd={onAdd}
-      onRemove={onRemove}
-      name={productObject.name}
-      image={productObject.image_link}
-      price={productObject.price}
-      />
     </>
   );
 };

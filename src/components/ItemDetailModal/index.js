@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { NavLink } from 'react-router-dom';
 
-const ItemDetailModal = ({ name, image, price, description, removeItemDetail, incrementCount, onAdd }) => {
+const ItemDetailModal = ({ name, image, price, description, removeItemDetail, incrementCount }) => {
 
 
   return ( 
@@ -20,7 +20,7 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail, in
           </div>
           <div className={styles.description}> {description} </div>
           <div className={styles.btnContainer}>
-          <button onClick={onAdd} className={styles.btnModal}> ADD TO CART </button>
+          <button onClick={incrementCount} className={styles.btnModal}> ADD TO CART </button>
           <NavLink className={styles.btnModal} to="/cart"> SEE CART </NavLink>
           </div>
         </div>
