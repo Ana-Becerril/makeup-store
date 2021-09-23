@@ -10,7 +10,7 @@ const Counter = () => {
     },[])
     return (
 
-     <div className={styles.marker}>{count.length? count.length: "nosta"}</div>
+     <div className={styles.marker}>{count.length? count.length: 0}</div>
                
     );}
 

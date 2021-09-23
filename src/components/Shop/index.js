@@ -23,7 +23,6 @@ const Shop = () => {
     { name: "eyeliner", category: "Eyeliner" },
     { name: "eyeshadow", category: "Eyeshadow" },
     { name: "foundation", category: "Foundation" },
-    { name: "lipLiner", category: "Lip liner" },
     { name: "lipstick", category: "Lipstick" },
     { name: "mascara", category: "Mascara" }]
 
@@ -32,6 +31,9 @@ const Shop = () => {
     setProductObject(itemId[0])
     console.log(itemId)
   }
+
+  //Voy a empezar de nuevo con mis intentos de agregar items al carrito
+
 
    const incrementCount = (products) => {
      setCount([...count, products] );
