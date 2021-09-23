@@ -82,3 +82,34 @@ li:hover{
     height: 100%;
     width: 100%;
 }
+
+@media only screen and (max-width: 570px) {
+    .leftContainer{
+        width: 100%;
+        background-color: #6184C6;
+    }
+
+    .rightContainer{
+    display: none;
+}
+h2{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    color: white;
+    font-size: 30px;
+}
+
+.categoriesContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+}
