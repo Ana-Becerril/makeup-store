@@ -3,6 +3,7 @@ import styles from './style.module.css';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+import Counter from '../Counter';
 
 const NavBar = () => {
 
@@ -21,6 +22,7 @@ const NavBar = () => {
                 </div>
                 </div>
                 <div className={styles.cartContainer}>
+                    <Counter/>
                     <NavLink to="/cart">
                         <FontAwesomeIcon icon={faShoppingBag} className={styles.cartIcon} />
                     </NavLink>

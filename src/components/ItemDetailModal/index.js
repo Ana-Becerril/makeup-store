@@ -3,11 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { NavLink } from 'react-router-dom';
 
+const ItemDetailModal = ({ name, image, price, description, removeItemDetail, incrementCount }) => {
 
 
-const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) => {
-
-  return (
+  return ( 
     <>
       <div className={styles.modal}>
         <div className={styles.modalContent}>
@@ -15,13 +14,14 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) 
             <FontAwesomeIcon icon={faTimesCircle} className={styles.closeIcon} />
           </div>
           <div className={styles.productCardContainer}>
-            <img src={image} alt="Make up cosmetic" />
+            <img src={image} alt={name} />
             <div className={styles.name}> {name} </div>
             <div className={styles.price}> ${price} </div>
           </div>
           <div className={styles.description}> {description} </div>
           <div className={styles.btnContainer}>
-          <NavLink className={styles.btnModal} to="/cart"> ADD TO CART </NavLink>
+          <button onClick={incrementCount} className={styles.btnModal}> ADD TO CART </button>
+          <NavLink className={styles.btnModal} to="/cart"> SEE CART </NavLink>
           </div>
         </div>
       </div>
