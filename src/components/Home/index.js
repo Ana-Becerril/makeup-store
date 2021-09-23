@@ -11,9 +11,9 @@ const Home = () => {
         <video autoPlay muted loop src={Video} className={styles.video} />
         <div className={styles.txtContainer}>
           <h1>WE LOVE <span>MAKEUP</span> </h1>
-          <button>
-            <NavLink className={styles.button} to="/shop">SHOP</NavLink>
-          </button>
+          <div className={styles.button}>
+            <NavLink className={styles.cta} to="/shop">SHOP</NavLink>
+          </div>
         </div>
       </div>
     </div>

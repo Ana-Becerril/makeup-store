@@ -4,6 +4,7 @@ import axios from "axios";
 import Category from '../Category';
 import ProductCard from '../ProductCard';
 import ItemDetailModal from '../ItemDetailModal';
+// import Cart from '../Cart'
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -11,7 +12,7 @@ const Shop = () => {
   const [endPoint, setEndPoint] = useState("blush");
   const [itemDetail, setItemDetail] = useState(false);
   const [productObject, setProductObject] = useState({});
-  const [count, setCount] = useState([]);
+  // let [cart, setCart] = useState([])
 
   const removeItemDetail = () => setItemDetail(false);
   const showDetail = () => setItemDetail(true);
@@ -32,17 +33,6 @@ const Shop = () => {
     console.log(itemId)
   }
 
-  //Voy a empezar de nuevo con mis intentos de agregar items al carrito
-
-
-   const incrementCount = (products) => {
-     setCount([...count, products] );
-       const json = JSON.stringify(count)
-       localStorage.setItem('itemsincart', json)
-      console.log(count.length)
-      console.log(setCount)
-  }
-
   useEffect(() => {
     function fetchData() {
       axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
@@ -56,7 +46,26 @@ const Shop = () => {
     fetchData();
   }, [endPoint])
 
-  
+  // let localCart = localStorage.getItem("cart");
+
+  // useEffect(() => {
+  //   localCart = JSON.parse(localCart);
+  //   if (localCart) setCart(localCart)
+  // }, [])
+
+  // const addItem = (item) => {
+  //   let cartCopy = [...cart];
+  //   let {id} = item;
+  //   let existingItem = cartCopy.find(cartItem => cartItem.id == id);
+  //   if (existingItem) {
+  //       existingItem.quantity += item.quantity 
+  //   } else { 
+  //     cartCopy.push(item)
+  //   }
+  //   setCart(cartCopy)
+  //   let stringCart = JSON.stringify(cartCopy);
+  //   localStorage.setItem("cart", stringCart)
+  // }
 
   return (
     <>
@@ -98,11 +107,17 @@ const Shop = () => {
             image={productObject.image_link}
             price={productObject.price}
             description={productObject.description}
-            incrementCount={()=>incrementCount(products)}
             removeItemDetail={removeItemDetail}
+            // addItem={()=>addItem(item)}
              /> : null}
         </div>
       </div>
+      {/* {cart?
+      <Cart
+      name={productObject.name}
+      image={productObject.image_link}
+      price={productObject.price}
+      />:null} */}
     </>
   );
 };

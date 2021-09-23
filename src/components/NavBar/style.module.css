@@ -38,19 +38,10 @@ a{
   font-size: 22px;
   font-family: 'Poppins-Ligth';
 }
-.cartContainer{
-  width: 50px;
-  height: 50px;
-  background-color: #6184C6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  position: relative;
-}
+
 
 .cartIcon{
-  font-size: 25px;
+  font-size: 40px;
 }
 
 a:hover {
@@ -59,13 +50,13 @@ a:hover {
 }
 
 .marker{
-  height: 30px;
-  width: 30px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   background-color:#FCA3B9;
   color:white;
   position: relative;
-  left: 10px;
+  left: 9px;
   top:14px;
   display:flex;
   justify-content: center;
@@ -95,4 +86,31 @@ a:hover {
     transition: width 0.5s;
   }
 
- 
+@media only screen and (max-width: 570px) {
+
+  .navContainer{
+    width: 100%;
+    height: 40px;
+    padding:0 0 0 0;
+  }
+
+  a{
+    letter-spacing: 0px;
+    font-size: 19px;
+    margin-top: 30px;
+  }
+
+  .cartContainer{
+    background-color: transparent;
+  }
+
+  .cartIcon{
+    font-size: 34px;
+    padding-right: 10px;
+  }
+
+  .marker{
+    top:15px
+  }
+
+} 
