@@ -91,7 +91,7 @@ span{
         height: 50px;
         margin-top: 10px;
         margin-bottom: 45px;
-        background-color:lawngreen;
+        background-color:blueviolet;
     }
     
     .cta{
@@ -100,8 +100,8 @@ span{
 
 }
 
-.container{
-    height: 100%;
+.txtContainer{
+    height: auto;
 }
 
 
