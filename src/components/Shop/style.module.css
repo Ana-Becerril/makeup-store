@@ -79,22 +79,58 @@ li:hover{
 }
 
 .cardsContainer{
-    height: 100%;
-    width: 100%;
+    height: 50%;
+    width: 50%
 }
 
 @media only screen and (max-width: 570px) {
+    html,body{
+    overflow-x: hidden;
+
+    }
+
+    .mainContainer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        overflow-x: hidden;
+    }
+
     .leftContainer{
         width: 100%;
         background-color: #6184C6;
+        height:100vh;
+        position: initial;
     }
 
     .rightContainer{
-    display: none;
-}
+        width: 100%;
+        height: auto;
+    }
+
+    .cardsContainer{
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+
+    .productsCard{
+        width:100%;
+        height:50px;
+        left: 0;
+    }
+
+
 h2{
     margin: 0;
     padding: 0;
+}
+
+h3{
+    padding: 0;
+    margin: 10px;
 }
 
 ul{
@@ -110,6 +146,7 @@ li{
     display: flex;
     flex-direction: column;
     align-content: center;
+    position: relative;
 
 }
 }

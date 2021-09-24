@@ -13,7 +13,7 @@ const Contact = () => {
         </div>
         <div className={styles.rightContainer}>
           <h4> Contact <span>Information </span></h4>
-          <div className={styles.iconsBar}>
+          <div className={styles.iconsBarContact}>
         <a href="https://github.com/Ana-Becerril">
             <FontAwesomeIcon icon ={faGithubSquare} className={styles.githubIcon}/>
         </a>
