@@ -85,13 +85,22 @@ p{
     }
 
     .iconsBarContact{
-        width:100%;
-        height: 50%;
+        width:50%;
+        height: 40%;
         margin-top: 0px;
         margin: 0, 20px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-
+ 
+.githubIcon, .linkedinIcon, .twitterIcon, .whatsappIcon{
+    font-size: 80px;
+    height: 100%;
+    width: 100%;
+    padding:0 10px;
+    padding-bottom: 8px;
+}
 }
 
 
