@@ -4,7 +4,6 @@ import axios from "axios";
 import Category from '../Category';
 import ProductCard from '../ProductCard';
 import ItemDetailModal from '../ItemDetailModal';
-import ShopMobile from '../ShopMobile'
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
