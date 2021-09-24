@@ -85,7 +85,7 @@ const Shop = () => {
             </ul>
           </div>
         </div>
-        <div className={styles.rightContainer}>
+        <div className={styles.rightContainer} id="right">
           <div className={styles.cardsContainer}>
             <h3>{title}</h3>
             <div className={styles.productsCard}>
