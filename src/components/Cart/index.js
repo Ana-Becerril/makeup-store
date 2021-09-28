@@ -1,10 +1,17 @@
 import styles from './style.module.css';
 import { NavLink } from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 
 const Cart = (name, image, price) => {
   return (
     <>
+      <Helmet>
+        <style>{`body {
+                  overflow-y: hidden; 
+                }`}
+        </style>
+      </Helmet>
     <div className={styles.mainContainer}>
       <div className={styles.emptyContainer}>
       <h4>Your cart is <span>empty :(</span> </h4>

@@ -1,11 +1,18 @@
 import styles from './style.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubSquare, faLinkedin, faTwitterSquare,faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
+import {Helmet} from "react-helmet";
 
 
 const Contact = () => {
   return (
     <>
+      <Helmet>
+        <style>{`body {
+                  overflow-y: hidden; 
+                }`}
+        </style>
+      </Helmet>
       <div className={styles.mainContainer}>
         <div className={styles.leftContainer}>
           <h4> Just say <span>hello!</span></h4>

@@ -4,6 +4,8 @@ import axios from "axios";
 import Category from '../Category';
 import ProductCard from '../ProductCard';
 import ItemDetailModal from '../ItemDetailModal';
+import {Helmet} from "react-helmet";
+
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -67,7 +69,14 @@ const Shop = () => {
   // }
 
   return (
+    
     <>
+      <Helmet>
+        <style>{`body {
+                  overflow-y: hidden; 
+                }`}
+        </style>
+      </Helmet>
       <div className={styles.mainContainer}>
         <div className={styles.leftContainer}>
           <h2>CATEGORIES</h2>

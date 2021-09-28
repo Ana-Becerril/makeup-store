@@ -10,7 +10,10 @@ const Home = () => {
   return (
     <>
     <Helmet>
-    <style>{'body { background-color: #FCA3B9; }'}</style>
+    <style>{`body {
+              background-color: #FCA3B9;
+            }`}
+    </style>
     </Helmet>
     <div className={styles.mainContainer}>
         <div className={styles.top}>
