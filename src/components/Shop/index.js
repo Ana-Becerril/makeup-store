@@ -8,13 +8,12 @@ import {Helmet} from "react-helmet";
 
 
 const Shop = () => {
+
   const [products, setProducts] = useState([]);
   const [title, setTitle] = useState("");
   const [endPoint, setEndPoint] = useState("blush");
   const [itemDetail, setItemDetail] = useState(false);
   const [productObject, setProductObject] = useState({});
-  // let [cart, setCart] = useState([])
-
   const removeItemDetail = () => setItemDetail(false);
   const showDetail = () => setItemDetail(true);
 
@@ -27,6 +26,8 @@ const Shop = () => {
     { name: "foundation", category: "Foundation" },
     { name: "lipstick", category: "Lipstick" },
     { name: "mascara", category: "Mascara" }]
+
+   
 
   function itemFilter(id) {
     const itemId = products.filter(product => product.id === id);
@@ -47,29 +48,7 @@ const Shop = () => {
     fetchData();
   }, [endPoint])
 
-  // let localCart = localStorage.getItem("cart");
-
-  // useEffect(() => {
-  //   localCart = JSON.parse(localCart);
-  //   if (localCart) setCart(localCart)
-  // }, [])
-
-  // const addItem = (item) => {
-  //   let cartCopy = [...cart];
-  //   let {id} = item;
-  //   let existingItem = cartCopy.find(cartItem => cartItem.id == id);
-  //   if (existingItem) {
-  //       existingItem.quantity += item.quantity 
-  //   } else { 
-  //     cartCopy.push(item)
-  //   }
-  //   setCart(cartCopy)
-  //   let stringCart = JSON.stringify(cartCopy);
-  //   localStorage.setItem("cart", stringCart)
-  // }
-
   return (
-    
     <>
       <Helmet>
         <style>{`body {
@@ -116,16 +95,9 @@ const Shop = () => {
             price={productObject.price}
             description={productObject.description}
             removeItemDetail={removeItemDetail}
-            // addItem={()=>addItem(item)}
              /> : null}
         </div>
       </div>
-      {/* {cart?
-      <Cart
-      name={productObject.name}
-      image={productObject.image_link}
-      price={productObject.price}
-      />:null} */}
     </>
   );
 };

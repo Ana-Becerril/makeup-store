@@ -1,6 +1,6 @@
-import styles from './style.module.css' 
+import styles from './style.module.css'
 
-const ProductCard = ({name, image, price, showDetail, itemFilter}) => {
+const ProductCard = ({ name, image, price, showDetail, itemFilter}) => {
     return (
       <div onClick={function(event){ showDetail(); itemFilter()}} 
             className={styles.productCardContainer}>
