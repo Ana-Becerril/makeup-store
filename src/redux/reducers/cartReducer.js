@@ -1,8 +1,18 @@
 const initialState = {
     products: [],
+    product: {
+    },
+    counter: 0,
   };
+
+
   const CartReducer = (state = initialState, action) => {
     switch (action.type) {
+      case 'INCREMENT_COUNTER':
+        return {
+          ...state, 
+          counter: state.counter + 1
+        };
       case 'ADD_TO_CART':
         return {
           ...state,

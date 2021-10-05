@@ -1,10 +1,10 @@
 
 import styles from './style.module.css';
 
-const Counter = () => {
+const Counter = ({counter}) => {
      return(
      
-     <div className={styles.marker}>0</div>
+     <div className={styles.marker}>{counter}</div>
                
     
      )}

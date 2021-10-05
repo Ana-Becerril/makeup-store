@@ -1,5 +1,12 @@
 import * as ActionTypes from "../constants/action-types";
 
+export const incrementCounter = state => {
+  return{
+    type: ActionTypes.INCREMENT_COUNTER,
+    payload: state
+  };
+};
+
 export const addToCart = id => {
     return {
         type: ActionTypes.ADD_TO_CART,

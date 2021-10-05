@@ -2,9 +2,11 @@ import styles from './style.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { NavLink } from 'react-router-dom';
-import { Connect } from 'react-redux';
+import { connect } from 'react-redux';
+import { incrementCounter } from '../../redux/actions/actions';
 
-const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) => {
+
+const ItemDetailModal = ({ name, image, price, description, removeItemDetail, incrementCounter,currentCounter, updateCounter }) => {
 
 
   return ( 
@@ -21,7 +23,7 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) 
           </div>
           <div className={styles.description}> {description} </div>
           <div className={styles.btnContainer}>
-          <button  className={styles.btnModal}> ADD TO CART </button>
+          <button onClick={updateCounter.bind(null, currentCounter)} className={styles.btnModal}> ADD TO CART </button>
           <NavLink className={styles.btnModal} to="/cart"> SEE CART </NavLink>
           </div>
         </div>
@@ -29,4 +31,16 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail }) 
     </>
   );
 }
-export default ItemDetailModal;
+
+const mapStateToProps = state => {
+  return {
+    currentCounter: state.counter
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  updateCounter: state => dispatch(incrementCounter(state))
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(ItemDetailModal);
