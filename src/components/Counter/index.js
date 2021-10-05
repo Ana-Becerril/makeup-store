@@ -1,12 +1,18 @@
-
+import { connect } from 'react-redux';
 import styles from './style.module.css';
 
-const Counter = ({counter}) => {
+const Counter = ({currentCounter}) => {
      return(
      
-     <div className={styles.marker}>{counter}</div>
+     <div className={styles.marker}>{currentCounter}</div>
                
     
      )}
 
-export default Counter;
+     const mapStateToProps = state => {
+          return {
+            currentCounter: state.counter
+          };
+        };
+
+export default connect(mapStateToProps, null)(Counter);

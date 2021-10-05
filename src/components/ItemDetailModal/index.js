@@ -32,15 +32,9 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail, cu
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    currentCounter: state.counter
-  };
-};
-
 const mapDispatchToProps = dispatch => ({
   updateCounter: state => dispatch(incrementCounter(state))
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ItemDetailModal);
+export default connect(null, mapDispatchToProps)(ItemDetailModal);
