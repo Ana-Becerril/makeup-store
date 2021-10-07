@@ -40,6 +40,8 @@ const Shop = () => {
       axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
       .then(response => {
         setProducts(response.data)
+        // agregar accion que pase como parametro la variable de estado products
+        //para cambiar el estado del products que está en la store
       })
       .catch(error => {
         console.log(error)

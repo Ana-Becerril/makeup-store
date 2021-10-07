@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { incrementCounter } from '../../redux/actions/actions';
+import { addToCart, incrementCounter } from '../../redux/actions/actions';
 
 
 const ItemDetailModal = ({ name, image, price, description, removeItemDetail, currentCounter, updateCounter }) => {
@@ -33,7 +33,8 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail, cu
 }
 
 const mapDispatchToProps = dispatch => ({
-  updateCounter: state => dispatch(incrementCounter(state))
+  updateCounter: state => dispatch(incrementCounter(state)),
+  updateCart: id => dispatch(addToCart(id))
 });
 
 

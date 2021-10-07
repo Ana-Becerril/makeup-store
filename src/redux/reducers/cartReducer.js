@@ -1,6 +1,10 @@
 const initialState = {
+  //aqui van todos los productos ue contiene la categoria
     products: [],
+  //aqui van los productos selecctionados
+    selectedProducts: [],
     product: {
+      id:0
     },
     counter: 0,
   };
@@ -11,12 +15,14 @@ const initialState = {
       case 'INCREMENT_COUNTER':
         return {
           ...state, 
-          counter: state.counter + 1
+          counter: state.counter + 1,
         };
+      //hacer una acción que cambie el estado de products a a variable de estado que e
+      //está en Shop  GetProducts
       case 'ADD_TO_CART':
         return {
           ...state,
-          products: state.products.map(product =>
+          selectedProducts: state.products.map(product =>
             product.id === action.id ? {...product, selected: true} : product,
           ),
         };

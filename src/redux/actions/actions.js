@@ -1,8 +1,9 @@
 import * as ActionTypes from "../constants/action-types";
 
-export const incrementCounter = () => {
+export const incrementCounter = id => {
   return{
     type: ActionTypes.INCREMENT_COUNTER,
+    id,
   };
 };
 
