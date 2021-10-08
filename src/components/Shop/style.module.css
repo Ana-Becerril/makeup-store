@@ -45,10 +45,13 @@ h3{
     color:#FCD752;
     font-family: 'Monoton';
     font-size: 42px;
-    top: 50px;
+    top: 50%;
     left: 100%;
-    width: 100%;
+    width: 150%;
     position: relative;
+    background-color: #6184C6;
+    border-radius: 20px;
+    letter-spacing: 3px;
 
 }
 
@@ -69,8 +72,8 @@ ul{
 
 li{
     font-family: 'Poppins-Ligth';
-    font-size: 25px;
-    color: #6184C6;
+    font-size: 30px;
+    color: #456cb6;
     cursor: pointer;
 }
 
