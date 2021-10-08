@@ -5,13 +5,15 @@ import Category from '../Category';
 import ProductCard from '../ProductCard';
 import ItemDetailModal from '../ItemDetailModal';
 import {Helmet} from "react-helmet";
+import { getProducts } from '../../redux/actions/actions';
+import { connect } from 'react-redux';
 
 
-const Shop = () => {
+const Shop = ({updateProducts}) => {
 
   const [products, setProducts] = useState([]);
-  const [title, setTitle] = useState("");
-  const [endPoint, setEndPoint] = useState("blush");
+  const [title, setTitle] = useState("Choose a category, please");
+  const [endPoint, setEndPoint] = useState("");
   const [itemDetail, setItemDetail] = useState(false);
   const [productObject, setProductObject] = useState({});
   const removeItemDetail = () => setItemDetail(false);
@@ -40,8 +42,7 @@ const Shop = () => {
       axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
       .then(response => {
         setProducts(response.data)
-        // agregar accion que pase como parametro la variable de estado products
-        //para cambiar el estado del products que está en la store
+        updateProducts(products);
       })
       .catch(error => {
         console.log(error)
@@ -104,4 +105,8 @@ const Shop = () => {
   );
 };
 
-export default Shop;
+const mapDispatchToProps = dispatch => ({
+  updateProducts: products => dispatch(getProducts(products))
+});
+
+export default connect(null, mapDispatchToProps)(Shop);

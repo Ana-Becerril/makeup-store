@@ -17,8 +17,11 @@ const initialState = {
           ...state, 
           counter: state.counter + 1,
         };
-      //hacer una acción que cambie el estado de products a a variable de estado que e
-      //está en Shop  GetProducts
+        case 'GET_PRODUCTS':
+        return {
+          ...state, 
+          products: action.products
+        };
       case 'ADD_TO_CART':
         return {
           ...state,

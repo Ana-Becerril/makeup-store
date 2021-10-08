@@ -14,6 +14,14 @@ export const addToCart = id => {
     };
 };
 
+export const getProducts = products => {
+    console.log(products)
+    return {
+        type: ActionTypes.GET_PRODUCTS,
+        products,
+    };
+};
+
 export const removeFromCart = id => {
     return {
         type: ActionTypes.REMOVE_FROM_CART,

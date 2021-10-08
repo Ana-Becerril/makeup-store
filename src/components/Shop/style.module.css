@@ -45,9 +45,10 @@ h3{
     color:#FCD752;
     font-family: 'Monoton';
     font-size: 42px;
-    padding-top: 50px;
-    padding-left: 220px;
+    top: 50px;
+    left: 100%;
     width: 100%;
+    position: relative;
 
 }
 
