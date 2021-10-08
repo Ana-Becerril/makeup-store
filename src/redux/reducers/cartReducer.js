@@ -1,7 +1,5 @@
 const initialState = {
-  //aqui van todos los productos ue contiene la categoria
     products: [],
-  //aqui van los productos selecctionados
     selectedProducts: [],
     product: {
       id:0
@@ -25,9 +23,11 @@ const initialState = {
       case 'ADD_TO_CART':
         return {
           ...state,
-          selectedProducts: state.products.map(product =>
-            product.id === action.id ? {...product, selected: true} : product,
-          ),
+          selectedProducts: [ ...state.selectedProducts,
+            state.products.filter(product =>
+              product.id === action.id 
+            ),
+          ]
         };
       case 'REMOVE_FROM_CART':
         return {
