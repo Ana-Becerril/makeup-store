@@ -2,9 +2,9 @@ import styles from './style.module.css';
 import { NavLink } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { connect } from 'react-redux';
-import { addQuantity, addToCart, emptyCart, removeFromCart, subQuantity } from '../../redux/actions/actions';
+import { addQuantity, emptyCart, removeFromCart, subQuantity } from '../../redux/actions/actions';
 
-const Cart = ({ name, image, price }) => {
+const Cart = ({ currentProducts }) => {
 
   return (
     <>
@@ -18,9 +18,7 @@ const Cart = ({ name, image, price }) => {
         <div className={styles.emptyContainer}>
           <h4>Your cart is <span>empty :(</span> </h4>
           <div className={styles.productCardContainer}>
-            <img src={image} alt={name} />
-            <div className={styles.name}> {name} </div>
-            <div className={styles.price}> ${price} </div>
+            <div className={styles.price}> {currentProducts} </div>
             <button>
               <NavLink className={styles.button} to="/shop">SHOP</NavLink>
             </button>
@@ -33,13 +31,12 @@ const Cart = ({ name, image, price }) => {
 
  const mapStateToProps = state=> {
    return { 
-   products: state.products
+   currentProducts: state.selectedProducts
     };
   }
  
  const mapDispatchToProps = dispatch => {
    return{
-     addToCart: ()=> dispatch(addToCart()),
      removeFromCart: ()=> dispatch(removeFromCart()),
      addQuantity: ()=> dispatch(addQuantity()),
      subQuantity: ()=> dispatch(subQuantity()),
