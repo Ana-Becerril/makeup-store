@@ -42,7 +42,7 @@ const Shop = ({updateProducts}) => {
       axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
       .then(response => {
         setProducts(response.data)
-        updateProducts(response.data);
+        // updateProducts(response.data);
       })
       .catch(error => {
         console.log(error)
