@@ -9,7 +9,7 @@ import { getProducts } from '../../redux/actions/actions';
 import { connect } from 'react-redux';
 
 
-const Shop = ({updateProducts}) => {
+const Shop = ({getProducts}) => {
 
   const [products, setProducts] = useState([]);
   const [title, setTitle] = useState("⫷  Choose a category, please");
@@ -42,7 +42,7 @@ const Shop = ({updateProducts}) => {
       axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
       .then(response => {
         setProducts(response.data)
-        // updateProducts(response.data);
+         getProducts(response.data);
       })
       .catch(error => {
         console.log(error)
@@ -106,7 +106,7 @@ const Shop = ({updateProducts}) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  updateProducts: products => dispatch(getProducts(products))
+  getProducts: products => dispatch(getProducts(products))
 });
 
 export default connect(null, mapDispatchToProps)(Shop);
