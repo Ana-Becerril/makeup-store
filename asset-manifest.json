@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/makeup-store/static/css/main.03228d58.chunk.css",
+    "main.js": "/makeup-store/static/js/main.6aa6dc38.chunk.js",
+    "main.js.map": "/makeup-store/static/js/main.6aa6dc38.chunk.js.map",
+    "runtime-main.js": "/makeup-store/static/js/runtime-main.c68a2141.js",
+    "runtime-main.js.map": "/makeup-store/static/js/runtime-main.c68a2141.js.map",
+    "static/js/2.34060b77.chunk.js": "/makeup-store/static/js/2.34060b77.chunk.js",
+    "static/js/2.34060b77.chunk.js.map": "/makeup-store/static/js/2.34060b77.chunk.js.map",
+    "index.html": "/makeup-store/index.html",
+    "static/css/main.03228d58.chunk.css.map": "/makeup-store/static/css/main.03228d58.chunk.css.map",
+    "static/js/2.34060b77.chunk.js.LICENSE.txt": "/makeup-store/static/js/2.34060b77.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/makeup-store/static/media/Quicksand-Light.41253cb9.woff",
+    "static/media/home.72eb4a68.mp4": "/makeup-store/static/media/home.72eb4a68.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c68a2141.js",
+    "static/js/2.34060b77.chunk.js",
+    "static/css/main.03228d58.chunk.css",
+    "static/js/main.6aa6dc38.chunk.js"
+  ]
+}
