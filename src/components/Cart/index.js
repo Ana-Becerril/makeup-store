@@ -18,7 +18,7 @@ const Cart = ({ currentProducts }) => {
         <div className={styles.emptyContainer}>
           <h4>Your cart is <span>empty :(</span> </h4>
           <div className={styles.productCardContainer}>
-            <div className={styles.price}> {currentProducts} </div>
+            <div className={styles.price}> {currentProductsj} </div>
             <button>
               <NavLink className={styles.button} to="/shop">SHOP</NavLink>
             </button>
