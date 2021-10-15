@@ -49,7 +49,7 @@ const Shop = ({getProducts}) => {
       })
     }
     fetchData();
-  }, [endPoint, getProducts])
+  }, [endPoint, getProducts])// eslint-line-react-hooks/exhaustive-deps
 
   return (
     <>
