@@ -39,7 +39,7 @@ const Shop = ({getProducts}) => {
 
   useEffect(() => {
     function fetchData() {
-      axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
+      axios.get(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
       .then(response => {
         setProducts(response.data)
          getProducts(response.data);
