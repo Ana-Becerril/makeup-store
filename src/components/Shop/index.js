@@ -49,7 +49,7 @@ const Shop = ({getProducts}) => {
       })
     }
     fetchData();
-  }, [endPoint])
+  }, [endPoint, getProducts])
 
   return (
     <>
