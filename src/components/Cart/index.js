@@ -9,12 +9,6 @@ const Cart = ({ selectedProducts }) => {
 
   return (
     <>
-      {/* <Helmet>
-        <style>{`body {
-                  overflow-y: hidden; 
-                }`}
-        </style>
-      </Helmet> */}
       <div className={styles.mainContainer}>
         {selectedProducts && selectedProducts.length > 0 ? (
           <div className={styles.productCardContainer}>

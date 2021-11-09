@@ -25,7 +25,7 @@
     align-self: center;
 }
 
-img{
+.cartListImage{
     width: 100px;
     height: 100px;
     object-fit: contain;

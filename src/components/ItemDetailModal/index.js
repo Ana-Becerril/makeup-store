@@ -1,12 +1,11 @@
 import styles from './style.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addToCart, incrementCounter } from '../../redux/actions/actions';
+// import { addToCart, incrementCounter } from '../../redux/actions/actions';
 
 
-const ItemDetailModal = ({ name, image, price, description, removeItemDetail, currentCounter, updateCounter, updateCart,id }) => {
+const ItemDetailModal = ({ name, image, price, description, removeItemDetail}) => {
 
 
   return ( 
@@ -22,20 +21,10 @@ const ItemDetailModal = ({ name, image, price, description, removeItemDetail, cu
             <div className={styles.price}> ${price} </div>
           </div>
           <div className={styles.description}> {description} </div>
-          <div className={styles.btnContainer}>
-          <button onClick={function(event){ updateCounter(currentCounter); updateCart(id)}} className={styles.btnModal}> ADD TO CART </button>
-          <NavLink className={styles.btnModal} to="/cart"> SEE CART </NavLink>
           </div>
-        </div>
       </div>
     </>
   );
 }
 
-const mapDispatchToProps = dispatch => ({
-  updateCounter: state => dispatch(incrementCounter(state)),
-  updateCart: id => dispatch(addToCart(id))
-});
-
-
-export default connect(null, mapDispatchToProps)(ItemDetailModal);
+export default ItemDetailModal;

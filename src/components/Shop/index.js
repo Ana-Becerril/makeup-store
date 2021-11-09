@@ -7,7 +7,6 @@ import ItemDetailModal from '../ItemDetailModal';
 import {Helmet} from "react-helmet";
 import { getProducts } from '../../redux/actions/actions';
 import { connect } from 'react-redux';
-import CartList from '../CartList';
 
 
 const Shop = ({getProducts}) => {
@@ -50,7 +49,7 @@ const Shop = ({getProducts}) => {
       })
     }
     fetchData();
-  }, [endPoint, getProducts])// eslint-line-react-hooks/exhaustive-deps
+  }, [endPoint, getProducts])
 
   return (
     <>

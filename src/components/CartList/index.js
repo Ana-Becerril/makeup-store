@@ -6,7 +6,7 @@ const CartList = ({product}) => {
     <>
       <div className= {styles.cartListContainer}>
         <div className={styles.cartProduct}>
-        <img src={product.image_link} alt={product.name}/>
+        <img className={styles.cartListImage} src={product.image_link} alt={product.name}/>
         <div className={styles.name}> {product.name} </div>
         </div>
       </div>

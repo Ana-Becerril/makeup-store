@@ -65,6 +65,12 @@ a:hover {
   font-family: 'Poppins-Ligth';
 }
 
+.cartContainer{
+  position: fixed;
+  right: 30px;
+  top:0;
+}
+
 
 
 .coolLink {
