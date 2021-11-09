@@ -40,7 +40,8 @@ const Cart = ({ selectedProducts }) => {
 
 const mapStateToProps = state => {
   return {
-    selectedProducts: state.selectedProducts
+    selectedProducts: state.selectedProducts,
+    
   };
 }
 
