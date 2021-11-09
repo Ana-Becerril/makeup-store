@@ -21,6 +21,7 @@ const initialState = {
           products: action.products
         };
       case 'ADD_TO_CART':
+        console.log(state.selectedProducts)
         return {
           ...state,
           selectedProducts: [ ...state.selectedProducts,

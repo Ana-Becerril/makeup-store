@@ -37,3 +37,8 @@ body, html{
     font-size: 40px;
     color: #F6F4F9;
 }
+
+.currentProducts{
+    height: 100%;
+    width: 100%;
+}
