@@ -1,9 +1,6 @@
 import styles from './style.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
-import { connect } from 'react-redux';
-// import { addToCart, incrementCounter } from '../../redux/actions/actions';
-
 
 const ItemDetailModal = ({ name, image, price, description, removeItemDetail}) => {
 

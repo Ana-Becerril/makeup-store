@@ -42,6 +42,12 @@ a{
 
 .cartIcon{
   font-size: 40px;
+  color:#FCD752;
+}
+
+.cartIcon:hover {
+  color: #FCA3B9;
+  /* background-color: #6184C6; */
 }
 
 a:hover {

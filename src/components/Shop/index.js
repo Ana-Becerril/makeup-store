@@ -91,7 +91,8 @@ const Shop = ({getProducts}) => {
               ))}
             </div>
           </div>
-          {itemDetail ? <ItemDetailModal
+          {itemDetail ? 
+          <ItemDetailModal
             id={productObject.id}
             name={productObject.name}
             image={productObject.image_link}

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './style.module.css';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import Counter from '../Counter';
+import CartModal from '../CartModal';
 
 const NavBar = () => {
+const [cart, setCart] = useState(false);
+
+const showCart = () => setCart(true);
+const removeCart = () => setCart(false)
 
     return (
 
@@ -23,9 +28,11 @@ const NavBar = () => {
                 </div>
                 <div className={styles.cartContainer}>
                     <Counter/>
-                    <NavLink to="/cart">
-                        <FontAwesomeIcon icon={faShoppingBag} className={styles.cartIcon} />
-                    </NavLink>
+                        <FontAwesomeIcon onClick={showCart} icon={faShoppingBag} className={styles.cartIcon}/>
+                        {cart ? 
+                        <CartModal
+                        removeCart={removeCart}
+                        /> : null}
                 </div>
         </div>
     );

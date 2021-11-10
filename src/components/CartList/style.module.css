@@ -1,22 +1,21 @@
 .cartListContainer{
-    border-right:1px #FCA3B9 solid ;
-    width: 200px;
+    border-bottom:1px #FCA3B9 solid ;
+    width: 100%;
     height: 130px;
     text-align: center;
     display: inline-flex;
 }
 
 .cartProduct{
-    width: 200px;
-    height: 130px;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction:column;
     justify-content: center;
     align-items: center;
 }
 
 .name{
-    width: 90%;
+    width: 100%;
     font-size: 15px;
     font-family: 'Quicksand-Light';
     color: #6184C6;

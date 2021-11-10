@@ -4,7 +4,7 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import Shop from './components/Shop'
 import Contact from './components/Contact'
-import Cart from './components/Cart'
+import CartModal from './components/CartModal'
 import styles from './App.css'
 
 const Routes = () => {
@@ -17,7 +17,6 @@ const Routes = () => {
         <Route exact path="/" component={Home}/>
         <Route path="/shop" component={Shop}/>
         <Route path="/contact" component={Contact}/>
-        <Route exact path="/cart" component={Cart} />
       </Switch>
     </div>
     </BrowserRouter>
