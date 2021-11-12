@@ -7,6 +7,13 @@ export const incrementCounter = id => {
   };
 };
 
+export const decrementCounter = id => {
+    return{
+      type: ActionTypes.DECREMENT_COUNTER,
+      id,
+    };
+  };
+
 export const addToCart = id => {
     return {
         type: ActionTypes.ADD_TO_CART,

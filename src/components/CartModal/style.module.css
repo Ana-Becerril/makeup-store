@@ -25,7 +25,8 @@ body, html{
 
 .modalContent {
     display: flex;
-    width: 500px;
+    flex-direction:column;
+    width: 430px;
     height: 100%;
     z-index: 1;
     color: #FCD752;
@@ -62,4 +63,21 @@ body, html{
     text-align: center;
     color: #6184C6;
     font-family: 'Quicksand-Light';
+}
+
+.button{
+    font-family: 'Quicksand-Light';
+    background-color: #6184C6;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #F6F4F9;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
 }

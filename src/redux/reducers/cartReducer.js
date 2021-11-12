@@ -15,6 +15,11 @@ const initialState = {
           ...state, 
           counter: state.counter + 1,
         };
+        case 'DECREMENT_COUNTER':
+        return {
+          ...state, 
+          counter: state.counter - 1,
+        };
         case 'GET_PRODUCTS':
         return {
           ...state, 
@@ -31,14 +36,12 @@ const initialState = {
           ]
         };
       case 'REMOVE_FROM_CART':
+        console.log(state.selectedProducts)
         return {
           ...state,
-          products: state.products.map(product =>
-            product.id === action.id
-              ? {...product, selected: false, quantity: 1}
-              : product,
-          ),
+          selectedProducts: state.selectedProducts.filter(product => action.id !== product[0].id)
         };
+
       case 'ADD_QUANTITY':
         return {
           ...state,
