@@ -25,6 +25,9 @@ body, html{
     background-color: #FCA3B9;
     text-align: center;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .button, button{

@@ -1,6 +1,6 @@
 
 .navContainer{
-  width: 100%;
+  width: 30%;
   height: 60px;
   padding:20px 0 0 0;
   margin: 0;
@@ -34,8 +34,7 @@
 a{
   color:#FCD752;
   text-decoration: none;
-  letter-spacing: 6px;
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Poppins-Ligth';
 }
 
@@ -47,12 +46,11 @@ a{
 
 .cartIcon:hover {
   color: #FCA3B9;
-  /* background-color: #6184C6; */
 }
 
 a:hover {
-  color: #FCA3B9;
-  /* background-color: #6184C6; */
+  color: #6184C6;
+  background-color: #FCA3B9;
 }
 
 .marker{
@@ -76,27 +74,6 @@ a:hover {
   right: 30px;
   top:0;
 }
-
-
-
-.coolLink {
-    text-decoration: none;
-    color:white
-  }
-  
-  .coolLink::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background:#FCA3B9;
-    transition: width 0.1s;
-  }
-  
-  .coolLink:hover::after {
-    width: 100%;
-    transition: width 0.5s;
-  }
 
 @media only screen and (max-width: 570px) {
 

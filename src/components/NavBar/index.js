@@ -17,13 +17,13 @@ const removeCart = () => setCart(false)
         <div className={styles.navContainer} >
             <div className={styles.bar}>
                 <div className={`${styles.home} ${styles.coolLink}`}>
-                    <NavLink exact to="/">HOME</NavLink>
+                    <NavLink exact to="/">HOME </NavLink>
                 </div>
                 <div className={`${styles.shop} ${styles.coolLink}`}>
-                    <NavLink to="/shop">SHOP</NavLink>
+                    <NavLink to="/shop">SHOP </NavLink>
                 </div>
                 <div className={`${styles.contact} ${styles.coolLink}`}>
-                    <NavLink to="/contact">CONTACT</NavLink>
+                    <NavLink to="/contact">CONTACT </NavLink>
                 </div>
                 </div>
                 <div className={styles.cartContainer}>

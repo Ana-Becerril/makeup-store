@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import styles from './style.module.css';
 import axios from "axios";
 import Category from '../Category';
@@ -12,7 +12,7 @@ import { connect } from 'react-redux';
 const Shop = ({getProducts}) => {
 
   const [products, setProducts] = useState([]);
-  const [title, setTitle] = useState("⫷  Choose a category, please");
+  const [title, setTitle] = useState("");
   const [endPoint, setEndPoint] = useState("products");
   const [itemDetail, setItemDetail] = useState(false);
   const [productObject, setProductObject] = useState({});
@@ -59,6 +59,7 @@ const Shop = ({getProducts}) => {
                 }`}
         </style>
       </Helmet>
+      <div className={styles.main}>
       <div className={styles.mainContainer}>
         <div className={styles.leftContainer}>
           <h2>CATEGORIES</h2>
@@ -76,6 +77,7 @@ const Shop = ({getProducts}) => {
           </div>
         </div>
         <div className={styles.rightContainer} id="right">
+        {products && products.length > 0 ? (
           <div className={styles.cardsContainer}>
             <h3>{title}</h3>
             <div className={styles.productsCard}>
@@ -90,7 +92,10 @@ const Shop = ({getProducts}) => {
                 />
               ))}
             </div>
-          </div>
+          </div>):
+          <div className={styles.loadingioSpinnerRipple7qf9z3gmdsf}><div className={styles.ldioslltv1fy49}>
+          <div></div><div></div>
+          </div></div>}
           {itemDetail ? 
           <ItemDetailModal
             id={productObject.id}
@@ -101,6 +106,7 @@ const Shop = ({getProducts}) => {
             removeItemDetail={removeItemDetail}
              /> : null}
         </div>
+      </div>
       </div>
     </>
   );

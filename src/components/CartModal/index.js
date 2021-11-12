@@ -31,6 +31,7 @@ const CartModal = ({ selectedProducts, removeCart }) => {
             ) :
               (<div className={styles.emptyContainer}>
                 <h4>Your cart is empty </h4>
+                <p>Go to shop!</p>
               </div>)}
           </div>
         </div>
