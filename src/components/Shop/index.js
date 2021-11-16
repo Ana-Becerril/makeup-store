@@ -8,7 +8,6 @@ import {Helmet} from "react-helmet";
 import { getProducts } from '../../redux/actions/actions';
 import { connect } from 'react-redux';
 
-
 const Shop = ({getProducts}) => {
 
   const [products, setProducts] = useState([]);
@@ -16,6 +15,7 @@ const Shop = ({getProducts}) => {
   const [endPoint, setEndPoint] = useState("products");
   const [itemDetail, setItemDetail] = useState(false);
   const [productObject, setProductObject] = useState({});
+  const [isLoading, setIsLoading] = useState(false)
   const removeItemDetail = () => setItemDetail(false);
   const showDetail = () => setItemDetail(true);
 
@@ -30,7 +30,6 @@ const Shop = ({getProducts}) => {
     { name: "mascara", category: "Mascara" }]
 
    
-
   function itemFilter(id) {
     const itemId = products.filter(product => product.id === id);
     setProductObject(itemId[0])
@@ -39,10 +38,12 @@ const Shop = ({getProducts}) => {
 
   useEffect(() => {
     function fetchData() {
+      setIsLoading(true);
       axios.get(`https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${endPoint}`)
       .then(response => {
-        setProducts(response.data)
-         getProducts(response.data);
+        setProducts(response.data);
+        getProducts(response.data);
+        setIsLoading(false);
       })
       .catch(error => {
         console.log(error)
@@ -77,7 +78,7 @@ const Shop = ({getProducts}) => {
           </div>
         </div>
         <div className={styles.rightContainer} id="right">
-        {products && products.length > 0 ? (
+        {!isLoading && products && products.length > 0 ? (
           <div className={styles.cardsContainer}>
             <h3>{title}</h3>
             <div className={styles.productsCard}>

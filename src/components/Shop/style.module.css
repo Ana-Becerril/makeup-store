@@ -66,7 +66,6 @@ h3{
     left: 100%;
     width: 150%;
     position: relative;
-    background-color: #6184C6;
     border-radius: 20px;
     letter-spacing: 3px;
 
@@ -95,7 +94,7 @@ h3{
     border-radius: 50%;
     animation: ldioslltv1fy49 1s cubic-bezier(0,0.2,0.8,1) infinite;
   }.ldioslltv1fy49 div:nth-child(1) {
-    border-color: #ffa5d8;
+    border-color: #2b5ab1;
     animation-delay: 0s;
   }
   .ldioslltv1fy49 div:nth-child(2) {
@@ -108,8 +107,8 @@ h3{
     display: inline-block;
     overflow: hidden;
     position: absolute;
-    top: 197px;
-    right: 410px;
+    top: 30%;
+    right: 30%;
   }
   .ldioslltv1fy49 {
     width: 100%;
@@ -219,5 +218,9 @@ li{
     align-content: center;
     position: relative;
 
+}
+
+.loadingioSpinnerRipple7qf9z3gmdsf {
+    display: none;
 }
 }

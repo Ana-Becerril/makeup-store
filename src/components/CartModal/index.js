@@ -27,6 +27,7 @@ const CartModal = ({ selectedProducts, removeCart }) => {
                     />
                   ))}
                 </div>
+                <button>Pay!</button>
               </div>
             ) :
               (<div className={styles.emptyContainer}>

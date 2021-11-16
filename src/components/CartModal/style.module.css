@@ -30,7 +30,6 @@ body, html{
     height: 100%;
     z-index: 1;
     color: #FCD752;
-    font-size: 20px;
     background-color:#FFFF;
     font-size: 15px;
     overflow-x:hidden;
@@ -66,8 +65,9 @@ body, html{
 
 .productCardContainer{
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 90%;
     margin:2px;
     border-radius: 12px;
     text-align: center;
@@ -75,16 +75,17 @@ body, html{
     font-family: 'Quicksand-Light';
 }
 
-.button{
+button, .button{
     font-family: 'Quicksand-Light';
     background-color: #6184C6;
     width: 150px;
-    height: 50px;
+    height: 80px;
     border: none;
     border-radius: 40px;
     font-size: 18px;
     color: #F6F4F9;
     margin: 10px;
+    align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
