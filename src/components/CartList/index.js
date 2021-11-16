@@ -1,4 +1,3 @@
-import React, { useState} from 'react';
 import styles from './style.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';

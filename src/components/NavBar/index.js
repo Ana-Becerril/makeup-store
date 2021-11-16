@@ -15,6 +15,7 @@ const removeCart = () => setCart(false)
     return (
 
         <div className={styles.navContainer} >
+            <div className={styles.barBurger}></div>
             <div className={styles.bar}>
                 <div className={`${styles.home} ${styles.coolLink}`}>
                     <NavLink exact to="/">HOME </NavLink>

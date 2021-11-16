@@ -4,7 +4,6 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import Shop from './components/Shop'
 import Contact from './components/Contact'
-import CartModal from './components/CartModal'
 import styles from './App.css'
 
 const Routes = () => {
