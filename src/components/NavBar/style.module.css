@@ -78,7 +78,7 @@ a:hover {
 @media only screen and (max-width: 570px) {
 
   .navContainer{
-    width: 100%;
+    width: 87%;
     height: 40px;
     padding:0 0 0 0;
   }
@@ -98,13 +98,13 @@ a:hover {
   .cartIcon{
     font-size: 30px;
     padding-right: 0px;
-    padding-left: 30px;
+    padding-left: 0px;
   }
 
   .marker{
-    top:5px;
-    left:30px;
-    right: 0;
+    top:10px;
+    left:0;
+    right:17px;
   }
 
 } 
