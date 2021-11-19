@@ -77,9 +77,7 @@
     align-self: center;
 }
 
-.name{
-    color: #FCA3B9
-}
+
 
 .description{
     width: 90%;
@@ -138,4 +136,22 @@ overflow:auto;
 
 ::-webkit-scrollbar-thumb:hover {
   background: #6184C6; 
+}
+
+@media only screen and (max-width: 570px) {
+
+  .modalContent {
+    width: 90%; 
+  } 
+
+  .modal img{
+    height: 180px;
+    width: 180px;
+    padding: 0;
+  }
+
+  .closeIcon{
+    margin: 2;
+  }
+
 }

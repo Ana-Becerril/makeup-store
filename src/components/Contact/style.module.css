@@ -5,7 +5,7 @@ body, html{
     padding: 0;
 }
 
-.mainContainer{
+.contact .mainContainer{
     width: 100%;
     height: 100vh;
     padding: 0;
@@ -16,7 +16,7 @@ body, html{
 
 }
 
-.leftContainer, .rightContainer{
+.contact .leftContainer, .rightContainer{
     width: 50%;
     height: 100%;
     display: flex;
@@ -26,7 +26,7 @@ body, html{
     text-align: center;
 }
 
-h4{
+.contact h4{
     color:#FCD752;
     font-family: 'Monoton';
     font-size: 42px;
@@ -42,22 +42,20 @@ p{
     color: white;
 }
 
-.iconsBarContact{
-    height: 100%;
+.contact .iconsBarContact{
+    height: 15%;
     width: 50%;
     display: flex;
     justify-content: center;
     align-content: center;
     margin-top: 100px;
+    /* background-color: red; */
 }
 
-.githubIcon, .linkedinIcon, .twitterIcon, .whatsappIcon{
-    color:#FCA3B9;
-    font-size: 60px;
-    height: 100%;
-    width: 20%;
-    padding:0 20px;
-    padding-bottom: 8px;
+.contact .githubIcon, .contact .linkedinIcon, .contact .twitterIcon, .contact .whatsappIcon{
+    font-size: 100px;
+    width: 100px;
+    height: 100px;
 }
 
 .githubIcon:hover, .linkedinIcon:hover, .twitterIcon:hover, .whatsappIcon:hover {
@@ -66,16 +64,16 @@ p{
 
   @media only screen and (max-width: 570px) {
 
-    .mainContainer{
+    .contact .mainContainer{
         overflow-y: hidden;
         overflow-x: hidden;
     }
 
-    .leftContainer{
+    .contact .leftContainer{
         display: none;
     }
 
-    .rightContainer{
+    .contact .rightContainer{
         width: 100%;
     }
 
@@ -84,8 +82,8 @@ p{
         align-self: center;
     }
 
-    .iconsBarContact{
-        width:50%;
+    .contact .iconsBarContact{
+        width:65%;
         height: 40%;
         margin-top: 0px;
         margin: 0, 20px;
@@ -94,9 +92,9 @@ p{
     }
 
  
-.githubIcon, .linkedinIcon, .twitterIcon, .whatsappIcon{
+    .githubIcon, .linkedinIcon, .twitterIcon, .whatsappIcon{
     font-size: 80px;
-    height: 100%;
+    height: 50%;
     width: 100%;
     padding:0 10px;
     padding-bottom: 8px;

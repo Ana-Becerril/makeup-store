@@ -6,7 +6,7 @@ import {Helmet} from "react-helmet";
 
 const Contact = () => {
   return (
-    <>
+    <div className={styles.contact}>
       <Helmet>
         <style>{`body {
                   overflow-y: hidden; 
@@ -36,7 +36,7 @@ const Contact = () => {
         </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
   

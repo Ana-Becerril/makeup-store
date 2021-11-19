@@ -80,12 +80,10 @@ span{
         height: 100%;
     }
 
-    .top{
-        height: au;
-    }
+    
 
     .bottom{
-        height:30% ;
+        height:20% ;
     }
 
     .container{
@@ -99,8 +97,8 @@ span{
 
     h1{
         margin: 0;
-        margin-top:18px;
-        font-size: 52px;
+        margin-top:6%;
+        font-size: 8vh;
         padding-left: 0px;
         letter-spacing: 0px;
     }
@@ -116,7 +114,7 @@ span{
     
 
 .txtContainer{
-    height:50%;
+    height:80%;
     margin-top: 0;
 }
 

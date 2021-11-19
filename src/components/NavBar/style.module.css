@@ -106,12 +106,12 @@ a:hover {
 
   .hamburger{
   position: absolute;
-  top: 10px;
+  top: 23px;
   left: 10px;
   border-radius: 15px;
   z-index: 1;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   padding: 1rem;
   background:#FCD752;
   display: flex;
@@ -187,10 +187,10 @@ a:hover {
 }
 
 .menu > div {
-  background: rgba(140, 76, 172, 0.931);
+  background: #6184c6df;
   border-radius: 50%;
-  width: 170vw;
-  height: 170vw;
+  width: 160vw;
+  height: 160vw;
   display: flex;
   flex: none;
   align-items: center;
@@ -210,11 +210,13 @@ a:hover {
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   padding: 1rem;
 }
 
-
+a{
+  font-size: 25px;
+}
 
 .menu-wrap .menu > div > div > ul > li > a {
   color: inherit;
@@ -222,13 +224,11 @@ a:hover {
  transition: color 0.4s ease;
 }
 
-
-
-/* Yo lo puse para mostrar el menú en columna */
 .menuList{
   display: flex;
   flex-direction: column;
 }
+
 
   .cartContainer{
     background-color: transparent;
@@ -237,13 +237,13 @@ a:hover {
   }
 
   .cartIcon{
-    font-size: 30px;
+    font-size: 43px;
     padding-right: 0px;
     padding-left: 0px;
   }
 
   .marker{
-    top:10px;
+    top:5px;
     left:0;
     right:17px;
   }
